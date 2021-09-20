@@ -1,0 +1,13 @@
+<!-- tunr/templates/tunr/song_list.html -->
+{% extends 'nostaldja/base.html' %} {% block content %}
+<h3>Fads <a href="{% url 'fad_create' %}">(+)</a></h3>
+<ul>
+    {% for fad in fads %}
+    <li>
+        <a href="{% url 'fad_detail' pk=fad.pk %}">{{fad.name }}</a>{{fad.name}} <a
+            href="{% url 'fad_edit' pk=fad.pk %}">(edit)</a>
+
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

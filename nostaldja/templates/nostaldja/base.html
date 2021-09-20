@@ -1,0 +1,19 @@
+<!-- tunr/templates/tunr/base.html -->
+{% load static %}
+<html>
+
+<head>
+    <title>Nostaldja</title>
+</head>
+
+<body>
+    <h1>Nostaldja</h1>
+    <nav>
+        <a href="{% url 'base' %}"> Home</a>
+        <a href="{% url 'decade_list' %}">Decades</a>
+        <a href="{% url 'fad_list' %}"> Fads</a>
+    </nav>
+    {% block content %} {% endblock %}
+</body>
+
+</html>
